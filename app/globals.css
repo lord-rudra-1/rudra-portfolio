@@ -1,0 +1,331 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+:root:not(.dark) ::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
+:root.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+:root:not(.dark) ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #8b5cf6, #ec4899);
+  border-radius: 6px;
+}
+
+:root.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #8b5cf6, #ec4899);
+  border-radius: 6px;
+}
+
+:root:not(.dark) ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #7c3aed, #db2777);
+}
+
+:root.dark ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #7c3aed, #db2777);
+}
+
+/* For Firefox */
+:root:not(.dark) * {
+  scrollbar-width: thin;
+  scrollbar-color: #8b5cf6 #f3f4f6;
+}
+
+:root.dark * {
+  scrollbar-width: thin;
+  scrollbar-color: #8b5cf6 #1a1a1a;
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(-5px, 0);
+  }
+  20% {
+    clip-path: inset(15% 0 65% 0);
+    transform: translate(5px, 0);
+  }
+  40% {
+    clip-path: inset(45% 0 40% 0);
+    transform: translate(-5px, 0);
+  }
+  60% {
+    clip-path: inset(25% 0 60% 0);
+    transform: translate(5px, 0);
+  }
+  80% {
+    clip-path: inset(55% 0 30% 0);
+    transform: translate(-5px, 0);
+  }
+  100% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(0);
+  }
+}
+
+.glitch {
+  animation: glitch 1s infinite;
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #8b5cf6;
+  clip: rect(24px, 550px, 90px, 0);
+  animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #ec4899;
+  clip: rect(85px, 550px, 140px, 0);
+  animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+/* Skills section styles */
+.skills-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-background::before {
+  content: "SKILLS";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15rem;
+  font-weight: 900;
+  opacity: 0.05;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+/* Theme transition */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark and light mode classes - these will be applied automatically based on the class attribute */
+:root:not(.dark) .bg-black {
+  @apply bg-white;
+}
+
+:root:not(.dark) .bg-gray-900 {
+  @apply bg-gray-100;
+}
+
+:root:not(.dark) .bg-gray-900\/50 {
+  @apply bg-gray-100/80;
+}
+
+:root:not(.dark) .bg-gray-800 {
+  @apply bg-gray-200;
+}
+
+:root:not(.dark) .text-white {
+  @apply text-gray-900;
+}
+
+:root:not(.dark) .text-gray-300 {
+  @apply text-gray-700;
+}
+
+:root:not(.dark) .text-gray-400 {
+  @apply text-gray-600;
+}
+
+:root:not(.dark) .border-gray-800 {
+  @apply border-gray-300;
+}
+
+/* Gradient backgrounds for light mode */
+:root:not(.dark) .bg-gradient-to-b.from-black.to-gray-900 {
+  background: linear-gradient(to bottom, #ffffff, #f3f4f6);
+}
+
+:root:not(.dark) .bg-gradient-to-b.from-gray-900.to-black {
+  background: linear-gradient(to bottom, #f3f4f6, #ffffff);
+}
+
+:root:not(.dark) .bg-gradient-to-t.from-gray-900.to-black {
+  background: linear-gradient(to top, #f3f4f6, #ffffff);
+}
+
+/* Section background fixes for light mode */
+:root:not(.dark) section[id="work"] {
+  @apply bg-gradient-to-b from-gray-100 to-white;
+}
+
+:root:not(.dark) section[id="skills"] {
+  @apply bg-gradient-to-b from-gray-100 to-white;
+}
+
+:root:not(.dark) section[id="about"] {
+  @apply bg-gradient-to-b from-white to-gray-100;
+}
+
+:root:not(.dark) section[id="contact"] {
+  @apply bg-gradient-to-b from-gray-100 to-white;
+}
+
+:root:not(.dark) section[id="achievements"] {
+  @apply bg-gradient-to-b from-white to-gray-100;
+}
+
+/* Project Card and other card styling for light mode */
+:root:not(.dark) .p-6.rounded-lg.bg-gray-900 {
+  background-color: white;
+  border-color: #d1d5db; /* gray-300 */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+:root:not(.dark) .p-6.rounded-lg.bg-gray-900 h3.text-white {
+  color: #111827; /* gray-900 */
+}
+
+:root:not(.dark) .p-6.rounded-lg.bg-gray-900 p.text-gray-400 {
+  color: #4b5563; /* gray-600 */
+}
+
+:root:not(.dark) .p-6.rounded-lg.bg-gray-900 span.text-purple-300 {
+  color: #7e22ce; /* purple-700 */
+  background-color: #f3e8ff; /* purple-100 */
+}
+
+/* Fix for the emoji in the project section title */
+:root:not(.dark) span.ml-2.text-white {
+  color: #111827; /* gray-900 */
+}
+
+/* Skills section background opacity fix */
+:root:not(.dark) .skills-background::before {
+  opacity: 0.03;
+}
+
+/* Navbar light mode fixes */
+:root:not(.dark) nav.fixed {
+  @apply shadow-sm;
+}
+
+:root:not(.dark) nav a.text-gray-300 {
+  @apply text-gray-700;
+}
+
+:root:not(.dark) nav a.text-gray-300.hover\:text-white {
+  @apply hover:text-gray-900;
+}
+
+:root:not(.dark) nav button.text-white {
+  @apply text-gray-700 hover:text-gray-900;
+}
+
+/* Theme toggle in light mode */
+:root:not(.dark) .text-gray-300.hover\:text-white {
+  @apply text-gray-700 hover:text-gray-900;
+}
+
+/* Navbar scrolled state in light mode */
+:root:not(.dark) nav.fixed[class*="bg-black/80"] {
+  @apply bg-white/90 border-b border-gray-200;
+}
+
+/* Fix active navbar link in light mode */
+:root:not(.dark) nav a.bg-white.text-black {
+  @apply bg-purple-600 text-white;
+}
+
+/* Footer styles for light mode */
+:root:not(.dark) footer.bg-black {
+  background-color: #f8f8f8;
+  border-top-color: #e5e7eb;
+}
+
+:root:not(.dark) footer .text-gray-500 {
+  color: #6b7280;
+}
+
+:root:not(.dark) footer .text-gray-300 {
+  color: #4b5563;
+}
+
+:root:not(.dark) footer .hover\:text-white:hover {
+  color: #111827;
+}
+
+:root:not(.dark) footer .border-gray-800 {
+  border-color: #e5e7eb;
+}
