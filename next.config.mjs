@@ -7,8 +7,11 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    domains: ['vercel.com'],
+    unoptimized: false,
   },
+  swcMinify: true,
+  poweredByHeader: false,
 }
 
 export default nextConfig
