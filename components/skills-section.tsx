@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { motion } from "framer-motion"
 import * as React from 'react'
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient"
 
 interface Skill {
   name: string;
@@ -251,18 +252,23 @@ export default function SkillsSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.05 }}
                     viewport={{ once: true }}
-                    className="px-5 py-4 rounded-2xl flex items-center gap-4 bg-gray-900 hover:bg-gray-800 transition-all duration-300 hover:scale-105"
                   >
-                    {skill.icon !== "#" && (
-                      <Image 
-                        src={skill.icon} 
-                        alt={`${skill.name} icon`} 
-                        width={28} 
-                        height={28}
-                        className="w-7 h-7"
-                      />
-                    )}
-                    <span className="font-semibold text-white tracking-wide">{skill.name}</span>
+                    <HoverBorderGradient 
+                      className="flex items-center gap-4 bg-gray-900 py-3 px-4"
+                      containerClassName="hover:scale-105 rounded-2xl"
+                      duration={1.5}
+                    >
+                      {skill.icon !== "#" && (
+                        <Image 
+                          src={skill.icon} 
+                          alt={`${skill.name} icon`} 
+                          width={28} 
+                          height={28}
+                          className="w-7 h-7"
+                        />
+                      )}
+                      <span className="font-semibold text-white tracking-wide">{skill.name}</span>
+                    </HoverBorderGradient>
                   </motion.div>
                 ))}
               </div>
