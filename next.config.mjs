@@ -10,7 +10,6 @@ const nextConfig = {
     domains: ['vercel.com'],
     unoptimized: false,
   },
-  swcMinify: true,
   poweredByHeader: false,
 }
 
