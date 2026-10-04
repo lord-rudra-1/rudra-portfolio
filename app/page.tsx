@@ -129,7 +129,7 @@ export default function Home() {
             {/* Contact section */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
               <motion.a
-                href="/rudra_resume.pdf"
+                href="https://drive.google.com/file/d/1Et1lMDn9FUSOYDwFllK8Ub7gOrIZLRZL/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
