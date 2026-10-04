@@ -42,7 +42,7 @@ const experienceData = [
     id: 1,
     company: "IIT Kanpur",
     role: "SURGE Research Intern — Perception and Intelligence Lab",
-    period: "May 2026 – Present",
+    period: "May 2026 – July 2026",
     location: "Kanpur, Uttar Pradesh",
     type: "Internship",
     logo: "/iitk-logo.svg",
