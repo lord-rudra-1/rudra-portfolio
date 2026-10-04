@@ -121,10 +121,6 @@ export default function Home() {
               Hello, I'm Rudra Raj Narayan Monas, A Computer Science Student at IIIT Vadodara
             </h2>
 
-            {/* Subtitle */}
-            <h3 className="text-xl md:text-2xl mb-8 text-gray-400">
-              Full-Stack Engineer
-            </h3>
 
             {/* Contact section */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
@@ -184,27 +180,26 @@ export default function Home() {
                 title="Zero-Touch NWDAF"
                 description="Framework for real-time 5G signaling anomaly detection and autonomous mitigation, achieving 2s detection latency."
                 tags={["Python", "PyTorch", "Ella Core", "UERANSIM"]}
+                link="https://github.com/lord-rudra-1/Zero-Touch-NWDAF"
+              />
+              <ProjectCard
+                title="Adversarial-Resilient Hybrid RAG"
+                description="A terminal-based AI agent for multi-domain support triage using a Hybrid RAG pipeline combining dense and sparse search, robust against adversarial queries."
+                tags={["Python", "Hybrid RAG", "BM25", "Vector Search"]}
+                link="https://github.com/lord-rudra-1/Adversarial-Resilient-Hybrid-RAG-for-Multi-Domain-Support-Triage"
+              />
+              <ProjectCard
+                title="Secure CLI"
+                description="A secure command-line interface tool ensuring safe and encrypted operations for sensitive tasks."
+                tags={["Python", "CLI", "Security"]}
                 link="https://github.com/lord-rudra-1"
               />
               <ProjectCard
                 title="FEDSEG-APP"
                 description="Federated chest X-ray segmentation platform. Improved Dice score to 0.7927 using prototype-guided learning."
                 tags={["Python", "FastAPI", "Streamlit", "Federated Learning"]}
-                link="https://github.com/lord-rudra-1"
+                link="https://github.com/lord-rudra-1/FEDSEG-APP"
                 liveLink="https://huggingface.co/spaces/codehashira23/FEDSEG-APP"
-              />
-              <ProjectCard
-                title="Distributed Access Control"
-                description="Decentralized access-control framework for secure edge-computing data sharing using Key-Aggregate Cryptography."
-                tags={["C/C++", "Cryptography", "Edge Computing"]}
-                link="https://github.com/lord-rudra-1"
-              />
-              <ProjectCard
-                title="PetStop - Pet Adoption"
-                description="Full-stack pet adoption platform with features for pet registration, adoption applications, and pet care services."
-                tags={["React", "Node.js", "Express", "PostgreSQL"]}
-                link="https://github.com/lord-rudra-1/PetStop"
-                liveLink="https://pet-stop-beta.vercel.app/"
               />
               <ProjectCard
                 title="Image Processing Lab"
@@ -214,10 +209,11 @@ export default function Home() {
                 liveLink="https://image-processsing-experimentataion.vercel.app/"
               />
               <ProjectCard
-                title="Code Playground"
-                description="Full-stack competitive coding platform with features for algorithm practice, contests, and code execution in multiple languages."
-                tags={["MERN Stack", "React", "Node.js", "MongoDB"]}
-                link="https://github.com/lord-rudra-1/Code-Playground-Coding-Plateform-"
+                title="PetStop - Pet Adoption"
+                description="Full-stack pet adoption platform with features for pet registration, adoption applications, and pet care services."
+                tags={["React", "Node.js", "Express", "PostgreSQL"]}
+                link="https://github.com/lord-rudra-1/PetStop"
+                liveLink="https://pet-stop-beta.vercel.app/"
               />
             </div>
           </motion.div>

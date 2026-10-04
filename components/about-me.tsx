@@ -55,6 +55,20 @@ const experienceData = [
   {
     id: 2,
     company: "IIIT Vadodara",
+    role: "Teaching Assistant — Design and Analysis of Algorithms",
+    period: "Aug 2026 – Present",
+    location: "IIIT Vadodara",
+    type: "Part-time",
+    logo: "/iiitv-logo.svg",
+    responsibilities: [
+      "Evaluated assignments and supported students with debugging and complexity analysis.",
+      "Assisted laboratory sessions implementing algorithms in C/C++.",
+      "Conducted tutorial sessions for algorithm design concepts."
+    ],
+  },
+  {
+    id: 3,
+    company: "IIIT Vadodara",
     role: "Teaching Assistant — Data Structures Lab",
     period: "Jan 2026 – Apr 2026",
     location: "IIIT Vadodara",
@@ -66,7 +80,7 @@ const experienceData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     company: "InventX Accelerator, IIT Gandhinagar",
     role: "Product Innovation Intern",
     period: "May 2025 – Jul 2025",
@@ -119,8 +133,7 @@ export default function AboutMe() {
               <div className="prose prose-invert max-w-none text-center md:text-left">
                 {/* Mobile description */}
                 <p className="text-lg leading-relaxed md:hidden">
-                  Computer Science student at IIIT Vadodara with expertise in full-stack development, game engineering,
-                  and data systems. Building innovative solutions with real-world impact. 💻⚡🔥
+                  Computer Science student at IIIT Vadodara specializing in Artificial Intelligence, Machine Learning, and Software Engineering. Passionate about building robust algorithms and intelligent systems. 💻⚡🔥
                 </p>
                 {/* Desktop description */}
                 <div className="hidden md:block">
@@ -128,19 +141,14 @@ export default function AboutMe() {
                     🚀 <strong>Hello, I'm Rudra Raj Narayan Monas!</strong>
                   </p>
                   <p className="mb-4">
-                    A dedicated <strong>Computer Science student</strong> with versatile technical expertise spanning
-                    full-stack development, game engineering, and data systems. I've demonstrated success in building
-                    competitive coding platforms, disaster management systems, and interactive applications.
+                    A dedicated <strong>Computer Science student</strong> at IIIT Vadodara with specialized expertise spanning
+                    <strong> Artificial Intelligence, Machine Learning, and Software Engineering</strong>. I have a proven track record of designing high-impact systems, from zero-shot denoising models for microscopic imagery at IIT Kanpur, to scalable federated learning platforms.
                   </p>
                   <p className="mb-4">
-                    Currently pursuing my <strong>B.Tech in Computer Science and Engineering</strong> at IIIT Vadodara
-                    International Campus, Diu, where I maintain a <strong>CPI of 9.03/10.0</strong> and rank in the{" "}
-                    <strong>top 5% of my class</strong>.
+                    Currently pursuing my <strong>B.Tech in Computer Science and Engineering</strong>, where I maintain a <strong>CPI of 8.98</strong> and serve as a Teaching Assistant for core algorithms courses. I secured AIR 6271 in GATE 2026 (Computer Science) and ranked in the top 5% of NPTEL's Machine Learning cohort.
                   </p>
                   <p>
-                    I'm passionate about <strong>solving complex technical problems</strong> and creating applications
-                    that make a difference. My experience includes leading development teams and delivering projects
-                    with real-world impact across multiple domains.
+                    I am highly passionate about <strong>architecting complex data pipelines</strong>, developing state-of-the-art machine learning models, and building scalable software solutions that solve real-world technical challenges.
                   </p>
                 </div>
               </div>
@@ -252,7 +260,7 @@ export default function AboutMe() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex flex-col md:flex-row gap-8 relative"
+                    className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 relative`}
                   >
                     {/* Content */}
                     <div className="md:w-1/2 p-6 bg-gray-900/50 rounded-xl backdrop-blur-sm border border-gray-800">
@@ -292,6 +300,17 @@ export default function AboutMe() {
 
                     {/* Timeline Point (hidden on mobile) */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full hidden md:block"></div>
+
+                    {/* Timeline Connector (hidden on mobile) */}
+                    {index < experienceData.length - 1 && (
+                      <motion.div
+                        initial={{ height: 0 }}
+                        whileInView={{ height: "100%" }}
+                        transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
+                        className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-purple-500 to-pink-500 hidden md:block"
+                        style={{ top: "100%", height: "100px" }}
+                      ></motion.div>
+                    )}
                   </motion.div>
                 ))}
               </div>

@@ -16,191 +16,41 @@ interface Skill {
 // Define the skill items with their logos and categories
 const skillItems: Skill[] = [
   // Languages
-  { 
-    name: "C/C++", 
-    icon: "/icons/cpp.svg", 
-    color: "bg-blue-600",
-    textColor: "text-white",
-    category: "Languages"
-  },
-  { 
-    name: "Python", 
-    icon: "/icons/python.svg", 
-    color: "bg-blue-500",
-    textColor: "text-white",
-    category: "Languages"
-  },
-  { 
-    name: "JavaScript/TypeScript", 
-    icon: "/icons/javascript.svg", 
-    color: "bg-yellow-400",
-    textColor: "text-black",
-    category: "Languages"
-  },
-  { 
-    name: "C#", 
-    icon: "/icons/csharp.svg", 
-    color: "bg-purple-600",
-    textColor: "text-white",
-    category: "Languages"
-  },
-  
-  // Databases
-  { 
-    name: "MongoDB", 
-    icon: "/icons/mongodb.svg", 
-    color: "bg-green-600",
-    textColor: "text-white",
-    category: "Databases"
-  },
-  { 
-    name: "MySQL", 
-    icon: "/icons/mysql.svg", 
-    color: "bg-blue-700",
-    textColor: "text-white",
-    category: "Databases"
-  },
-  
-  // Frameworks
-  { 
-    name: "Next.js", 
-    icon: "/icons/next.svg", 
-    color: "bg-black",
-    textColor: "text-white",
-    category: "Frameworks"
-  },
-  { 
-    name: "Express", 
-    icon: "/icons/express.svg", 
-    color: "bg-gray-700",
-    textColor: "text-white",
-    category: "Frameworks"
-  },
-  { 
-    name: "Node.js", 
-    icon: "/icons/node.svg", 
-    color: "bg-green-700",
-    textColor: "text-white",
-    category: "Frameworks"
-  },
-  
-  // Libraries
-  { 
-    name: "React", 
-    icon: "/icons/react.svg", 
-    color: "bg-blue-400",
-    textColor: "text-white",
-    category: "Libraries"
-  },
-  { 
-    name: "Auth.js", 
-    icon: "/icons/auth.svg", 
-    color: "bg-gray-800",
-    textColor: "text-white",
-    category: "Libraries"
-  },
-  { 
-    name: "Shadcn", 
-    icon: "/icons/shadecn.svg", 
-    color: "bg-gray-900",
-    textColor: "text-white",
-    category: "Libraries"
-  },
-  { 
-    name: "Tailwind CSS", 
-    icon: "/icons/tailwindcss.svg", 
-    color: "bg-cyan-500",
-    textColor: "text-white",
-    category: "Libraries"
-  },
-  { 
-    name: "CORS", 
-    icon: "#", 
-    color: "bg-indigo-600",
-    textColor: "text-white",
-    category: "Libraries"
-  },
-  { 
-    name: "Axios", 
-    icon: "#", 
-    color: "bg-purple-500",
-    textColor: "text-white",
-    category: "Libraries"
-  },
-  
-  // Tools/Environments
-  { 
-    name: "Git/GitHub", 
-    icon: "/icons/github.svg", 
-    color: "bg-gray-900",
-    textColor: "text-white",
-    category: "Tools"
-  },
-  { 
-    name: "Docker", 
-    icon: "/icons/docker.svg", 
-    color: "bg-blue-600",
-    textColor: "text-white",
-    category: "Tools"
-  },
-  { 
-    name: "MATLAB", 
-    icon: "/icons/matlab.svg", 
-    color: "bg-orange-600",
-    textColor: "text-white",
-    category: "Tools"
-  },
-  { 
-    name: "Arduino", 
-    icon: "/icons/arduino.svg", 
-    color: "bg-teal-600",
-    textColor: "text-white",
-    category: "Tools"
-  },
-  { 
-    name: "Unity", 
-    icon: "/icons/unity.svg", 
-    color: "bg-gray-800",
-    textColor: "text-white",
-    category: "Tools"
-  },
-  { 
-    name: "CI/CD", 
-    icon: "/icons/ci-cd.svg", 
-    color: "bg-green-700",
-    textColor: "text-white",
-    category: "Tools"
-  },
-  { 
-    name: "AWS", 
-    icon: "/icons/aws.svg", 
-    color: "bg-orange-500",
-    textColor: "text-white",
-    category: "Tools" 
-  },
-  
-  // Concepts
-  { 
-    name: "Data Structures & Algorithms", 
-    icon: "#", 
-    color: "bg-purple-700",
-    textColor: "text-white",
-    category: "Concepts"
-  },
-  { 
-    name: "Full Stack Web Development", 
-    icon: "#", 
-    color: "bg-pink-600",
-    textColor: "text-white",
-    category: "Concepts"
-  },
-  { 
-    name: "System Design", 
-    icon: "#", 
-    color: "bg-blue-800",
-    textColor: "text-white",
-    category: "Concepts"
-  }
+  { name: "C/C++", icon: "/icons/cpp.svg", color: "bg-blue-600", textColor: "text-white", category: "Languages" },
+  { name: "Python", icon: "/icons/python.svg", color: "bg-blue-500", textColor: "text-white", category: "Languages" },
+  { name: "MATLAB", icon: "/icons/matlab.svg", color: "bg-orange-600", textColor: "text-white", category: "Languages" },
+  { name: "SQL", icon: "/icons/mysql.svg", color: "bg-blue-700", textColor: "text-white", category: "Languages" },
+  { name: "Bash", icon: "#", color: "bg-gray-800", textColor: "text-white", category: "Languages" },
+
+  // Core CS
+  { name: "Data Structures & Algorithms", icon: "#", color: "bg-purple-700", textColor: "text-white", category: "Core CS" },
+  { name: "Operating Systems", icon: "#", color: "bg-blue-800", textColor: "text-white", category: "Core CS" },
+  { name: "DBMS", icon: "#", color: "bg-green-600", textColor: "text-white", category: "Core CS" },
+  { name: "Computer Networks", icon: "#", color: "bg-orange-500", textColor: "text-white", category: "Core CS" },
+  { name: "OOP", icon: "#", color: "bg-pink-600", textColor: "text-white", category: "Core CS" },
+
+  // ML & AI
+  { name: "PyTorch", icon: "#", color: "bg-orange-600", textColor: "text-white", category: "ML & AI" },
+  { name: "TensorFlow", icon: "#", color: "bg-orange-400", textColor: "text-white", category: "ML & AI" },
+  { name: "CUDA", icon: "#", color: "bg-green-500", textColor: "text-white", category: "ML & AI" },
+  { name: "Computer Vision", icon: "#", color: "bg-purple-500", textColor: "text-white", category: "ML & AI" },
+  { name: "Image Processing", icon: "#", color: "bg-blue-400", textColor: "text-white", category: "ML & AI" },
+  { name: "Federated Learning", icon: "#", color: "bg-cyan-500", textColor: "text-white", category: "ML & AI" },
+  { name: "Deep Learning", icon: "#", color: "bg-pink-500", textColor: "text-white", category: "ML & AI" },
+
+  // Frameworks & Tech
+  { name: "FastAPI", icon: "#", color: "bg-teal-500", textColor: "text-white", category: "Frameworks & Tech" },
+  { name: "Streamlit", icon: "#", color: "bg-red-500", textColor: "text-white", category: "Frameworks & Tech" },
+  { name: "REST APIs", icon: "#", color: "bg-gray-600", textColor: "text-white", category: "Frameworks & Tech" },
+  { name: "OpenSSL", icon: "#", color: "bg-yellow-600", textColor: "text-white", category: "Frameworks & Tech" },
+  { name: "UERANSIM", icon: "#", color: "bg-indigo-600", textColor: "text-white", category: "Frameworks & Tech" },
+  { name: "Ella Core", icon: "#", color: "bg-fuchsia-600", textColor: "text-white", category: "Frameworks & Tech" },
+
+  // Tools
+  { name: "Git", icon: "/icons/github.svg", color: "bg-gray-900", textColor: "text-white", category: "Tools" },
+  { name: "GitHub", icon: "/icons/github.svg", color: "bg-gray-900", textColor: "text-white", category: "Tools" },
+  { name: "Linux", icon: "#", color: "bg-yellow-500", textColor: "text-white", category: "Tools" },
+  { name: "Docker", icon: "/icons/docker.svg", color: "bg-blue-600", textColor: "text-white", category: "Tools" }
 ]
 
 export default function SkillsSection() {
