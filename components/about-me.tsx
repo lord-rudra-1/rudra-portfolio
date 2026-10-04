@@ -7,52 +7,78 @@ import { Calendar, MapPin, Building2, GraduationCap } from "lucide-react"
 const educationData = [
   {
     id: 1,
-    institution: "IIIT Vadodara International Campus, Diu",
+    institution: "Indian Institute of Information Technology Vadodara",
     degree: "B.Tech in Computer Science and Engineering",
-    period: "2023 - 2027 (Expected)",
-    location: "Diu, India",
+    period: "Aug 2023 – May 2027",
+    location: "Gandhinagar, Gujarat, India",
     type: "Full-time",
     logo: "/iiitv-logo.svg",
-    achievements: ["CPI: 9.03/10.0", "SPI: 9.33/10.0", "Top 5% of class"],
+    achievements: ["CPI: 8.98"],
   },
   {
     id: 2,
-    institution: "Kendriya Vidyalaya, Ujjain",
-    degree: "CBSE Board, 12th Grade",
-    period: "2023",
-    location: "Ujjain, India",
+    institution: "Kendriya Vidyalaya Ujjain",
+    degree: "Class XII (CBSE)",
+    period: "Apr 2019 – Mar 2022",
+    location: "Ujjain, Madhya Pradesh",
     type: "Full-time",
     logo: "/kv-logo.svg",
-    achievements: ["93.8%"],
+    achievements: ["93.80%"],
   },
   {
     id: 3,
-    institution: "Kendriya Vidyalaya, Ujjain",
-    degree: "CBSE Board, 10th Grade",
-    period: "2021",
-    location: "Ujjain, India",
+    institution: "Kendriya Vidyalaya Ujjain",
+    degree: "Class X (CBSE)",
+    period: "Apr 2019 – Mar 2022",
+    location: "Ujjain, Madhya Pradesh",
     type: "Full-time",
     logo: "/kv-logo.svg",
-    achievements: ["94.6%"],
+    achievements: ["94.60%"],
   },
 ]
 
 const experienceData = [
   {
     id: 1,
-    company: "IIIT Vadodara - ICD",
-    role: "Academic Committee Member",
-    period: "2024 - 2025",
-    location: "Diu, India",
+    company: "IIT Kanpur",
+    role: "SURGE Research Intern — Perception and Intelligence Lab",
+    period: "May 2026 – Present",
+    location: "Kanpur, Uttar Pradesh",
+    type: "Internship",
+    logo: "/iitk-logo.svg",
+    responsibilities: [
+      "Designed a novel zero-shot denoising method for microscopic images targeting Gaussian and Poisson noise.",
+      "Implemented blind-spot CNN-based denoising models in PyTorch/TensorFlow with CUDA-accelerated training.",
+      "Benchmarked model performance against existing state-of-the-art methods on FMD and W2S microscopy datasets."
+    ],
+  },
+  {
+    id: 2,
+    company: "IIIT Vadodara",
+    role: "Teaching Assistant — Data Structures Lab",
+    period: "Jan 2026 – Apr 2026",
+    location: "IIIT Vadodara",
     type: "Part-time",
     logo: "/iiitv-logo.svg",
     responsibilities: [
-      "Collaborated with faculty and students to enhance academic policies and organize academic events",
-      "Assisted in curriculum planning, exam scheduling, and addressing student academic concerns",
-      "Streamlined student-faculty communication, reducing resolution time for academic concerns by 30%",
-      "Actively contributed to the organisation of the college cultural fest, coordinating between academic and cultural committees"
+      "Assisted laboratory sessions for 180+ students implementing data structures and algorithms in C/C++.",
+      "Evaluated assignments, viva examinations, and supported students with debugging and complexity analysis."
     ],
   },
+  {
+    id: 3,
+    company: "InventX Accelerator, IIT Gandhinagar",
+    role: "Product Innovation Intern",
+    period: "May 2025 – Jul 2025",
+    location: "Gandhinagar, Gujarat",
+    type: "Internship",
+    logo: "/iitgn-logo.svg",
+    responsibilities: [
+      "Designed a vibration-damping handle grip using signal processing and Fourier Transform-based vibration analysis.",
+      "Prototyped and tested designs using Arduino, Fusion 360/SolidWorks, 3D printing, and laser cutting.",
+      "Reduced measured hand-transmitted vibration levels from 3.7 m/s² to 2.1 m/s² through iterative design and testing."
+    ],
+  }
 ]
 
 export default function AboutMe() {

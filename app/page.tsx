@@ -59,7 +59,7 @@ export default function Home() {
       // Create mailto URL with subject and body
       const subject = `Portfolio Contact: ${name}`
       const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-      const mailtoUrl = `mailto:rudraraj12345672@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+      const mailtoUrl = `mailto:rudraraj7861@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
       
       // Open the user's email client
       window.open(mailtoUrl, '_blank')
@@ -106,11 +106,6 @@ export default function Home() {
             </div>
 
             {/* New badge */}
-            <div className="flex items-center justify-center mb-8">
-              <span className="bg-blue-600 text-white text-xs px-2 py-1 rounded-full mr-2">New</span>
-              <span className="text-white">Code Playground is live!</span>
-              <span className="ml-2 text-white">□</span>
-            </div>
 
             {/* Main heading */}
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4 text-white">
@@ -134,7 +129,7 @@ export default function Home() {
             {/* Contact section */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
               <motion.a
-                href="/resume.pdf"
+                href="/rudra_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -146,7 +141,7 @@ export default function Home() {
 
               <div className="flex items-center gap-2 text-gray-300">
                 <span className="text-sm">□</span>
-                <span>rudraraj12345672@gmail.com</span>
+                <span>rudraraj7861@gmail.com</span>
               </div>
             </div>
           </motion.div>
@@ -186,40 +181,43 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectCard
-                title="Code Playground"
-                description="Full-stack competitive coding platform with features for algorithm practice, contests, and code execution in multiple languages."
-                tags={["MERN Stack", "React", "Node.js", "MongoDB"]}
-                link="https://github.com/lord-rudra-1/Code-Playground-Coding-Plateform-"
+                title="Zero-Touch NWDAF"
+                description="Framework for real-time 5G signaling anomaly detection and autonomous mitigation, achieving 2s detection latency."
+                tags={["Python", "PyTorch", "Ella Core", "UERANSIM"]}
+                link="https://github.com/lord-rudra-1"
               />
               <ProjectCard
-                title="Assembly Visualizer GUI"
-                description="Educational web application that visualizes assembly code execution and CPU operations in real-time."
-                tags={["Next.js", "TypeScript", "Tailwind CSS"]}
-                link="https://github.com/lord-rudra-1/assembly_visualizer_gui"
+                title="FEDSEG-APP"
+                description="Federated chest X-ray segmentation platform. Improved Dice score to 0.7927 using prototype-guided learning."
+                tags={["Python", "FastAPI", "Streamlit", "Federated Learning"]}
+                link="https://github.com/lord-rudra-1"
+                liveLink="https://huggingface.co/spaces/codehashira23/FEDSEG-APP"
               />
               <ProjectCard
-                title="Disaster Relief Management"
-                description="Comprehensive disaster management application with role-based authentication for administrators and volunteers."
-                tags={["Node.js", "Express", "Sequelize", "MySQL"]}
-                link="https://github.com/lord-rudra-1/Disaster-Relief-Management-System"
-              />
-              <ProjectCard
-                title="Asteroid Shooting Game"
-                description="2D space shooter game with intuitive spaceship movement controls and progressive weapon upgrades."
-                tags={["Unity", "C#", "Game Development"]}
-                link="https://github.com/lord-rudra-1/Space-Shooter"
-              />
-              <ProjectCard
-                title="IIIT Vadodara ICD Website"
-                description="Redesigned the official institute website with modern UI/UX for an educational hackathon (WEB SURGE 2025)."
-                tags={["Next.js", "React", "Tailwind CSS", "Framer Motion"]}
-                link="https://github.com/lord-rudra-1/IIITVadodara-ICD_Institute-Website"
+                title="Distributed Access Control"
+                description="Decentralized access-control framework for secure edge-computing data sharing using Key-Aggregate Cryptography."
+                tags={["C/C++", "Cryptography", "Edge Computing"]}
+                link="https://github.com/lord-rudra-1"
               />
               <ProjectCard
                 title="PetStop - Pet Adoption"
                 description="Full-stack pet adoption platform with features for pet registration, adoption applications, and pet care services."
-                tags={["React", "Node.js", "Express", "MySQL"]}
+                tags={["React", "Node.js", "Express", "PostgreSQL"]}
                 link="https://github.com/lord-rudra-1/PetStop"
+                liveLink="https://pet-stop-beta.vercel.app/"
+              />
+              <ProjectCard
+                title="Image Processing Lab"
+                description="Experimentation platform for various image processing techniques and computer vision algorithms."
+                tags={["Python", "Image Processing", "Computer Vision"]}
+                link="https://github.com/lord-rudra-1"
+                liveLink="https://image-processsing-experimentataion.vercel.app/"
+              />
+              <ProjectCard
+                title="Code Playground"
+                description="Full-stack competitive coding platform with features for algorithm practice, contests, and code execution in multiple languages."
+                tags={["MERN Stack", "React", "Node.js", "MongoDB"]}
+                link="https://github.com/lord-rudra-1/Code-Playground-Coding-Plateform-"
               />
             </div>
           </motion.div>
@@ -251,15 +249,19 @@ export default function Home() {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
                     <span className="text-purple-400 mr-2">•</span>
-                    <span>CodeChef: 2-Star Coder (Max Rating: 1513)</span>
+                    <span>Won Second Best Invention at InventX'25, securing INR 1,00,000 and filing a provisional patent</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-purple-400 mr-2">•</span>
-                    <span>LeetCode: Max Rating: 1508 | Solved 172+ problems across all difficulty levels</span>
+                    <span>Achieved peak ratings of 1533 on CodeChef and 1506 on LeetCode</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-purple-400 mr-2">•</span>
-                    <span>Finalist at College Annual Hackathon 2025</span>
+                    <span>Qualified GATE 2026 (Computer Science) with AIR 6271</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-purple-400 mr-2">•</span>
+                    <span>Earned NPTEL Elite+Silver (Top 5%) in Machine Learning</span>
                   </li>
                 </ul>
               </div>
@@ -272,19 +274,15 @@ export default function Home() {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-start">
                     <span className="text-pink-400 mr-2">•</span>
-                    <span>Organizer, Stavya (College Cultural Festival) 2025</span>
+                    <span>Student Placement Committee (SPC) POC (Jan 2026 – Present)</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-pink-400 mr-2">•</span>
-                    <span>Led coordination team for Antakshari event with 100+ participants from 10+ institutions</span>
+                    <span>Academic Committee Core Member (July 2024 – April 2025)</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-pink-400 mr-2">•</span>
-                    <span>Public Speaking Club (2023-Present)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-pink-400 mr-2">•</span>
-                    <span>Received 'Best Speaker' recognition at departmental technical symposium</span>
+                    <span>Organized academic and cultural activities, helping conduct 10+ events for 300+ participants</span>
                   </li>
                 </ul>
               </div>
@@ -368,7 +366,7 @@ export default function Home() {
                   <p className="text-gray-400 mb-2">Or reach me directly:</p>
                   <div className="flex justify-center">
                     <a
-                      href="mailto:rudraraj12345672@gmail.com"
+                      href="mailto:rudraraj7861@gmail.com"
                       className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700"
                     >
                       <Mail className="mr-2 h-4 w-4" />
