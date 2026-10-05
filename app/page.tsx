@@ -38,13 +38,13 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setFormSubmitting(true)
-    
+
     try {
       const formData = new FormData(e.currentTarget)
       const name = formData.get('name') as string
       const email = formData.get('email') as string
       const message = formData.get('message') as string
-      
+
       // Basic validation
       if (!name || !email || !message) {
         toast({
@@ -55,18 +55,18 @@ export default function Home() {
         setFormSubmitting(false)
         return
       }
-      
+
       // Create mailto URL with subject and body
       const subject = `Portfolio Contact: ${name}`
       const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
       const mailtoUrl = `mailto:rudraraj7861@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-      
+
       // Open the user's email client
       window.open(mailtoUrl, '_blank')
-      
+
       // Reset the form
       e.currentTarget.reset()
-      
+
       toast({
         title: "Message sent",
         description: "Thank you for your message! Your email client should open to send the email."
@@ -125,7 +125,7 @@ export default function Home() {
             {/* Contact section */}
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8">
               <motion.a
-                href="https://drive.google.com/file/d/1Et1lMDn9FUSOYDwFllK8Ub7gOrIZLRZL/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1h-uN7mpWfYzR8FPZH4yQX_HoQtg3W-hA/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -391,7 +391,7 @@ export default function Home() {
             <div className="flex items-center justify-center md:justify-end gap-4 mt-4 md:mt-0">
               <SocialIcon icon={<Github className="h-5 w-5" />} href="https://github.com/lord-rudra-1" label="GitHub" />
               <SocialIcon icon={<Linkedin className="h-5 w-5" />} href="https://www.linkedin.com/in/rudra-monas" label="LinkedIn" />
-              <SocialIcon icon={<Twitter className="h-5 w-5" />} href="https://x.com/Lord_Rudra_1" label="X"/>
+              <SocialIcon icon={<Twitter className="h-5 w-5" />} href="https://x.com/Lord_Rudra_1" label="X" />
             </div>
           </div>
         </div>
